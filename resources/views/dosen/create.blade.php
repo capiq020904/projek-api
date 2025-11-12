@@ -6,8 +6,8 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Daftar Fakultas</h1>
-    <a href="" class="btn btn-primary mb-4">Tambah Fakultas</a>
+    <h1 class="h3 mb-2 text-gray-800">Daftar Dosen</h1>
+    <a href="" class="btn btn-primary mb-4">Tambah Dosen</a>
 
 
 
@@ -17,17 +17,17 @@
             <h6 class="m-0 font-weight-bold text-primary">Tambah Fakultas</h6>
         </div>
         <div class="card-body">
-            <form action="{{ route('fakultas.store') }}" method="post">
+            <form action="{{ route('dosen.store') }}" method="post">
 
             @csrf
                 <div class="form-group">
-                    <label for="nama_fakultas">Nama Fakultas</label>
-                    <input type="text" class="form-control" id="namafakultas" name="nama_fakultas" placeholder="masukan nama fakultas">
+                    <label for="nama_fakultas">Nama Dosen</label>
+                    <input type="text" class="form-control" id="nama_dosen" name="nama_dosen" placeholder="masukan nama dosen">
                 </div>
 
                 <div class="form-group">
-                    <label for="kode_fakultas">Kode Fakultas</label>
-                    <input type="text" class="form-control" id="kode_fakultas" name="kode_fakultas" placeholder="masukan kode fakultas">
+                    <label for="kode_fakultas">NIDN Dosen</label>
+                    <input type="text" class="form-control" id="nid_dosen" name="nid_dosen" placeholder="masukan nid dosen">
                 </div>
 
                 <div class="form-group">

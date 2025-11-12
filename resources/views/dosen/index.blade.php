@@ -5,8 +5,8 @@
   <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Daftar Fakultas</h1>
-                    <a href="{{ route('fakultas.create') }}" class="btn btn-primary mb-4">Tambah Fakultas</a> 
+                    <h1 class="h3 mb-2 text-gray-800">Dosen</h1>
+                    <a href="{{ route('dosen.create') }}" class="btn btn-primary mb-4">Tambah Dosen</a> 
 
         
 
@@ -21,8 +21,8 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama Fakultas</th>
-                                            <th>Kode Fakultas</th>
+                                            <th>Nama Dosen</th>
+                                            <th>Nid Dosen</th>
                                             <th>Aksi</th>
             
                                         </tr>
@@ -37,15 +37,15 @@
                                     </tfoot> -->
                                     <tbody>
 
-                                    @foreach ($fakultas as $item )
+                                    @foreach ($dosens as $item )
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
-                                            <td>{{ $item->nama_fakultas }}</td>
-                                            <td>{{ $item->kode_fakultas }}</td>
+                                            <td>{{ $item->nama_dosen }}</td>
+                                            <td>{{ $item->nid_dosen }}</td>
                                             <td>
                                                 
-                                                <a href="{{ route('fakultas.edit', $item->id) }}" class="btn btn-primary"><i class="fa fa-pencil-alt"></i></a>
-                                                <a href="{{ route('fakultas.hapus', $item->id) }}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                                                <a href="{{ route('dosen.edit', $item->id) }}" class="btn btn-info"><i class="fa fa-pencil-alt"></i></a>
+                                                <a href="{{ route('dosen.hapus', $item->id) }}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
                                             </td>
                                         
                                         </tr>

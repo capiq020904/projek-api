@@ -5,8 +5,8 @@
   <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Daftar Fakultas</h1>
-                    <a href="{{ route('fakultas.create') }}" class="btn btn-primary mb-4">Tambah Fakultas</a> 
+                    <h1 class="h3 mb-2 text-gray-800">Daftar Mahasiswa</h1>
+                    <a href="{{ route('mahasiswa.create') }}" class="btn btn-primary mb-4">Tambah Mahasiswa</a> 
 
         
 
@@ -21,8 +21,8 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama Fakultas</th>
-                                            <th>Kode Fakultas</th>
+                                            <th>Nama Mahasiswa</th>
+                                            <th>NIM Mahasiswa</th>
                                             <th>Aksi</th>
             
                                         </tr>
@@ -37,15 +37,15 @@
                                     </tfoot> -->
                                     <tbody>
 
-                                    @foreach ($fakultas as $item )
+                                    @foreach ($mahasiswa as $item )
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
-                                            <td>{{ $item->nama_fakultas }}</td>
-                                            <td>{{ $item->kode_fakultas }}</td>
+                                            <td>{{ $item->nama_mahasiswa }}</td>
+                                            <td>{{ $item->nim_mahasiswa }}</td>
                                             <td>
                                                 
-                                                <a href="{{ route('fakultas.edit', $item->id) }}" class="btn btn-primary"><i class="fa fa-pencil-alt"></i></a>
-                                                <a href="{{ route('fakultas.hapus', $item->id) }}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                                                <a href="{{ route('mahasiswa.edit', $item->id) }}" class="btn btn-primary"><i class="fa fa-pencil-alt"></i></a>
+                                                <a href="{{ route('mahasiswa.hapus', $item->id) }}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
                                             </td>
                                         
                                         </tr>

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB ADMIN 2 - DASHBOARD</title>
+    <title>Muhammad Syafiq Firdaus Affan</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('backend/vendor/fontawesome-free/css/all.min.css') }} " rel="stylesheet" type="text/css">
