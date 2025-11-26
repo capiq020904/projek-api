@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
-use APP\Models\Prodi;
+use App\Models\Prodi;
 use Illuminate\Http\Request;
 
 class ProdiController extends Controller

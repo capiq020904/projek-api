@@ -1,21 +1,22 @@
 <?php
 
 namespace App\Http\Controllers\Api;
+
 use App\Http\Controllers\Controller;
-use App\Models\Fakultas;
+use App\Models\Dosen;
 use Illuminate\Http\Request;
 
-class FakultasController extends Controller
+class DosenController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $fakultas = Fakultas::all();
+        $dosen = Dosen::all();
         return response() ->json([
             'status' => true,
-            'data' => $fakultas
+            'data' => $dosen
         ],200);
     }
 
