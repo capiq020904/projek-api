@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Api\FakultasController;
+use App\Http\Controllers\Api\ProdiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +19,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/fakultas',[FakultasController::class, 'index']);
+Route::get('/prodi',[ProdiController::class, 'index']);
