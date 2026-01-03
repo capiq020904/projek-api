@@ -35,19 +35,16 @@ class ProdiController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-{
+    public function store(Request $request){
+         $validate =$request->validate([
+            'name_prodi' => 'required|max:50',
+            'kode_prodi' => 'required',
+            'fakultas_id' => 'required',
+        ]);
+        $prodi = Prodi::create($validate);
 
-
-   $prodi = Prodi::create([
-    'name_prodi'=>$request->nama_prodi,
-    'kode_prodi'=>$request->kode_prodi,
-    'fakultas_id'=>$request->fakultas_id,
-]);
-
-  
-     return redirect()->route('prodi.index');
-}
+        return redirect()->route('prodi.index');
+    }
 
     /**
      * Display the specified resource.
